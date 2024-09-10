@@ -76,6 +76,10 @@ label {
   justify-content: space-between;
 }
 
+.quantity {
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
 
 #submit {
   height: 50px;
@@ -90,7 +94,7 @@ label {
   background-color: rgba(255, 255, 255, 0.343);
 }
 
-input:focus-visible {
+input:focus-visible, #unit:focus-visible {
   outline: none;
   inline-size: none;
   background-color: rgba(255, 255, 255, 0.343);
@@ -98,6 +102,14 @@ input:focus-visible {
 
 input {
   padding: 5px;
+  background-color: rgba(255, 255, 255, 0.632);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+#unit {
+  padding: 4px;
   background-color: rgba(255, 255, 255, 0.632);
   border: none;
   border-radius: 5px;
@@ -121,7 +133,7 @@ input {
   margin-bottom: 30px;
 }
 
-#table {
+.table {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6,1fr);

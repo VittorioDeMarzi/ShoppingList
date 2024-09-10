@@ -38,15 +38,21 @@ function getAllItemsToBuy() {
       data.forEach((element) => {
         const container = document.createElement("article");
         container.classList.add("list");
+        
         const name = document.createElement("div");
         name.classList.add("listItem");
         name.innerHTML = element.name;
+        
         const quantity = document.createElement("div");
         quantity.classList.add("listItem");
-        quantity.innerHTML = element.quantity;
+        const selectElement = document.querySelector('select[name="unit"]');
+        const selectedValue = selectElement.value;
+        quantity.innerHTML = element.quantity + " " + selectedValue;
+        
         const shop = document.createElement("div");
         shop.classList.add("listItem");
         shop.innerHTML = element.shop;
+
         const note = document.createElement("div");
         note.classList.add("listItem");
         note.innerHTML = element.note;
